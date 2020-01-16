@@ -24,6 +24,7 @@ const UserList = () => {
                     name={user.name}
                     bio={user.bio}
                     key={user.id}
+                    id={user.id}
                     />
                 ))}
         </>
