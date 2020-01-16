@@ -2,7 +2,7 @@
 
 const express = require('express')
 const data = require('./data/db.js');
-
+const cors = require('cors')
 const server = express();
 
 server.listen(5000, () => {
@@ -10,6 +10,8 @@ server.listen(5000, () => {
 });
 
 server.use(express.json());
+server.use(cors());
+
 
 server.post("/api/users/", (req, res) => {
     const userInfo = req.body;
